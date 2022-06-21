@@ -1,0 +1,109 @@
+:root {
+  --blue-shadow-clear: rgba(24, 133, 194, 0.3);
+  --blue-shadow-strong: rgba(24, 133, 194, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh; /*TODO probablemente a quitar*/
+  background: linear-gradient(to bottom right, #0b404d, #298ea6);
+}
+
+header {
+  display: flex;
+  height: 3rem;
+  background: linear-gradient(to bottom right, #333333, #121212);
+}
+.title {
+  color: white;
+  margin: auto auto;
+}
+.container-logo-github{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 5rem solid transparent;
+    border-top: 3rem solid white;
+    border-bottom: 3rem solid transparent; 
+}
+.container-tablero {
+  background-color: aliceblue;
+  margin: 2rem 2rem;
+  height: 35rem;
+  box-shadow: 0px 2px 10px rgba(8, 9, 10, 0.3), 0px 4px 20px rgba(0, 0, 0, 0.4);
+}
+.tablero {
+  height: 100%;
+  width: 100%;
+}
+
+.container-btn {
+  display: flex;
+}
+
+.btn-start {
+  margin: auto auto;
+  width: 9.5rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  box-shadow: 0px 2px 10px var(--blue-shadow-clear),    0px 4px 20px var(--blue-shadow-strong);
+  background: linear-gradient(to bottom right, rgba(17, 78, 112, 0.974), rgba(24, 132, 194, 0.996));
+  border: 1px solid rgba(24, 133, 194);
+  color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 2s 100ms, background-position 1s ease, font-size 100ms 0ms;
+  -webkit-transition: color 2s 100ms, background-position 1s ease, font-size 100ms 0ms;
+  -moz-transition: color 2s 100ms, background-position 1s ease, font-size 100ms 0ms;
+  -ms-transition: color 2s 100ms, background-position 1s ease, font-size 100ms 0ms;
+  -o-transition: color 2s 100ms, background-position 1s ease, font-size 100ms 0ms;
+}
+.btn-start:hover{
+    /* background: linear-gradient(to bottom right, rgba(24, 132, 194, 0.563), rgba(17, 79, 112, 0.768)); */
+    background-position: 9.4rem;
+}
+.btn-start:active{
+    font-size: 1.45rem;
+}
+
+/*------------------Score------------------*/
+.score{
+    display: flex;
+    width: 100%;
+}
+.container-score{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    background: inherit;
+    /* background-color: rgba(255, 255, 255, 0.446); */
+    background-color: rgba(61, 30, 30, 0.15);  
+    backdrop-filter: blur(1rem);
+}
+.team{
+    color: white;
+    font-size: 1.6rem;
+}
+
+.red{
+    color: #E22F2E;
+    font-weight: bold;
+}
+.yellow{
+    color: yellow;
+    font-weight: bold;
+}
