@@ -1,7 +1,18 @@
+@import"./root.css";
+
 :root {
   --blue-shadow-clear: rgba(24, 133, 194, 0.3);
   --blue-shadow-strong: rgba(24, 133, 194, 0.4);
+  --blue-gradient: linear-gradient(to bottom right, #0b404d, #298ea6);
+  --blue-gradient-btn: linear-gradient(to bottom right, rgba(17, 78, 112, 0.974), rgba(24, 132, 194, 0.996));
+  --black-gradient: linear-gradient(to bottom right, #333333, #121212);
+  --box-shadow: 0px 2px 10px rgba(8, 9, 10, 0.3), 0px 4px 20px rgba(0, 0, 0, 0.4);
+  --box-shadow-btn: 0px 2px 10px var(--blue-shadow-clear),    0px 4px 20px var(--blue-shadow-strong);
+  --backgorund-color-tablero: aliceblue;
+  --red-player:#E22F2E;
+  --yellow-player:yellow;
 }
+
 
 * {
   margin: 0;
@@ -13,35 +24,65 @@ html {
 }
 body {
   height: 100vh; /*TODO probablemente a quitar*/
-  background: linear-gradient(to bottom right, #0b404d, #298ea6);
+  background: var(--blue-gradient);
+  min-width: 320px;
 }
 
 header {
   display: flex;
-  height: 3rem;
-  background: linear-gradient(to bottom right, #333333, #121212);
+  height: 3.5rem;
+  background: var(--black-gradient);
+  min-width: 320px;
+  min-height: 35px;
 }
 .title {
   color: white;
   margin: auto auto;
+  font-size: var(--title);
 }
 .container-logo-github{
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
-    border-left: 5rem solid transparent;
-    border-top: 3rem solid white;
+    border-left: 4rem solid transparent;
+    border-top: 3.5rem solid white;
     border-bottom: 3rem solid transparent; 
 }
+.icon-github{
+    width: 2.2rem;
+    position: fixed;
+    transform: rotate(45deg);
+    top: 0;
+    right: 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transition: background-position 500ms 0ms;
+    -webkit-transition: background-position 500ms 0ms;
+    -moz-transition: background-position 500ms 0ms;
+    -ms-transition: background-position 500ms 0ms;
+    -o-transition: background-position 500ms 0ms;
+}
+.icon-github:hover{
+    background: linear-gradient(to bottom right, #0b404d, #298ea6);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-position: 2rem;
+}
 .container-tablero {
-  background-color: aliceblue;
+  background-color: var(--backgorund-color-tablero);
   margin: 2rem 2rem;
   height: 35rem;
-  box-shadow: 0px 2px 10px rgba(8, 9, 10, 0.3), 0px 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-shadow);
 }
 .tablero {
   height: 100%;
   width: 100%;
+  min-width: 280px;
 }
 
 .container-btn {
@@ -52,9 +93,11 @@ header {
   margin: auto auto;
   width: 9.5rem;
   height: 3rem;
-  font-size: 1.3rem;
-  box-shadow: 0px 2px 10px var(--blue-shadow-clear),    0px 4px 20px var(--blue-shadow-strong);
-  background: linear-gradient(to bottom right, rgba(17, 78, 112, 0.974), rgba(24, 132, 194, 0.996));
+  min-width: 93px;
+  min-height: 28px;
+  font-size: var(--details);
+  box-shadow: var(--box-shadow-btn);
+  background: var(--blue-gradient-btn);
   border: 1px solid rgba(24, 133, 194);
   color: white;
   border-radius: 6px;
@@ -71,7 +114,6 @@ header {
   -o-transition: color 2s 100ms, background-position 1s ease, font-size 100ms 0ms;
 }
 .btn-start:hover{
-    /* background: linear-gradient(to bottom right, rgba(24, 132, 194, 0.563), rgba(17, 79, 112, 0.768)); */
     background-position: 9.4rem;
 }
 .btn-start:active{
@@ -90,20 +132,19 @@ header {
     width: 90%;
     margin: 0 auto;
     background: inherit;
-    /* background-color: rgba(255, 255, 255, 0.446); */
     background-color: rgba(61, 30, 30, 0.15);  
     backdrop-filter: blur(1rem);
 }
 .team{
     color: white;
-    font-size: 1.6rem;
+    font-size: var(--body-text);
 }
 
 .red{
-    color: #E22F2E;
+    color: var(--red-player);
     font-weight: bold;
 }
 .yellow{
-    color: yellow;
+    color: var(--yellow-player);
     font-weight: bold;
 }
