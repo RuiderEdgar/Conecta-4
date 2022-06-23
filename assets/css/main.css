@@ -11,6 +11,7 @@
   --backgorund-color-tablero: aliceblue;
   --red-player:#E22F2E;
   --yellow-player:yellow;
+  --txt-color: white;
 }
 
 
@@ -23,10 +24,26 @@ html {
   font-size: 62.5%;
 }
 body {
-  height: 100vh; /*TODO probablemente a quitar*/
+  height: fit-content;
   background: var(--blue-gradient);
   min-width: 320px;
 }
+
+.boton{
+    font-size: var(--details);
+  box-shadow: var(--box-shadow-btn);
+  background: var(--blue-gradient-btn);
+  border: 1px solid rgba(24, 133, 194);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+.txt{
+    font-size: var(--details);
+    font-weight: bold;
+    color: var(--txt-color);
+}
+
 
 header {
   display: flex;
@@ -41,7 +58,7 @@ header {
   font-size: var(--title);
 }
 .container-logo-github{
-    position: fixed;
+    position: static;
     top: 0;
     right: 0;
     border-left: 4rem solid transparent;
@@ -50,7 +67,7 @@ header {
 }
 .icon-github{
     width: 2.2rem;
-    position: fixed;
+    position: absolute;
     transform: rotate(45deg);
     top: 0;
     right: 0;
@@ -73,6 +90,8 @@ header {
     -o-border-radius: 50%;
     background-position: 2rem;
 }
+
+/*------------Tablero---------------*/
 .container-tablero {
   background-color: var(--backgorund-color-tablero);
   margin: 2rem 2rem;
@@ -120,9 +139,27 @@ header {
     font-size: 1.45rem;
 }
 
+.retry{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.retry-icon{
+    width: 2rem;
+    height: 2rem;
+}
+.header-tablero{
+    display: none;
+}
 /*------------------Score------------------*/
 .score{
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 .container-score{
@@ -147,4 +184,27 @@ header {
 .yellow{
     color: var(--yellow-player);
     font-weight: bold;
+}
+
+.btn-reboot{
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+}
+.score-icon{
+    width: 4rem;
+    margin: auto;
+}
+.container-btn-reboot{
+    display: none;
+    flex-direction: column;
+}
+.txt-reboot{
+    margin: auto;
 }
