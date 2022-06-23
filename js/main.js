@@ -1,5 +1,12 @@
 window.addEventListener('load',()=>{
     const buildTablero = () =>{
+        var buttonsGame = document.querySelector('#game');
+        for (let i = 1; i <= 42; i++) {
+            var casilla = document.createElement('button');
+            casilla.classList.add('casilla');
+            casilla.setAttribute("id", `no${i}`);
+            buttonsGame.append(casilla);
+        };
     };
 
     var btnStart = document.querySelector('#btn-start');
@@ -9,5 +16,8 @@ window.addEventListener('load',()=>{
         document.querySelector('#tablero').classList.remove('container-btn');
         document.querySelector('.header-tablero').style.display = 'block';
         document.querySelector('.container-btn-reboot').style.display = 'flex';
+        document.querySelector('#game').style.display = 'grid';
+
+        buildTablero();
     });
 });

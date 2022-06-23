@@ -12,6 +12,7 @@
   --red-player:#E22F2E;
   --yellow-player:yellow;
   --txt-color: white;
+  --board-color: #013BCB;
 }
 
 
@@ -24,7 +25,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  height: fit-content;
+  height: 100vh;
   background: var(--blue-gradient);
   min-width: 320px;
 }
@@ -95,7 +96,7 @@ header {
 .container-tablero {
   background-color: var(--backgorund-color-tablero);
   margin: 2rem 2rem;
-  height: 35rem;
+  height: 28rem;
   box-shadow: var(--box-shadow);
 }
 .tablero {
@@ -156,6 +157,35 @@ header {
 .header-tablero{
     display: none;
 }
+
+/*----------Casillas-----------*/
+.game{
+  display: none;
+  background-color: var(--board-color);
+  padding: 1rem 0 1.5rem;
+  border-radius: 15px 15px 10px 10px;
+  margin: 3rem 5px;
+  /*TODOajustarelmargenderechoizquierdo*/grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+  column-gap: 0px;
+  row-gap: 6px;
+  justify-items: center;
+  -webkit-border-radius: 15px 15px 10px 10px;
+  -moz-border-radius: 15px 15px 10px 10px;
+  -ms-border-radius: 15px 15px 10px 10px;
+  -o-border-radius: 15px 15px 10px 10px;
+}
+.casilla{
+  border: none;
+  height: 26px;
+  width: 26px;
+  background-color: #E22F2E;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
 /*------------------Score------------------*/
 .score{
     display: flex;
