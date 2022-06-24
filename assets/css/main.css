@@ -156,7 +156,26 @@ header {
 }
 .header-tablero{
     display: none;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    text-align: center;
+    
 }
+.header-tablero > p{
+  font-size: var(--subtitle);
+  font-weight: bold;
+  color: white;
+  background: var(--red-player);
+  width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  box-shadow: var(--box-shadow);
+}
+
 
 /*----------Casillas-----------*/
 .game{
@@ -178,13 +197,14 @@ header {
   border: none;
   height: 26px;
   width: 26px;
-  background-color: #E22F2E;
+  background: white;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+
 
 /*------------------Score------------------*/
 .score{

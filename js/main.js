@@ -1,3 +1,4 @@
+import { game } from "./game.js";
 window.addEventListener('load',()=>{
     const buildTablero = () =>{
         var buttonsGame = document.querySelector('#game');
@@ -14,10 +15,12 @@ window.addEventListener('load',()=>{
         //-----------Acomodo de botones
         btnStart.style.display = 'none';
         document.querySelector('#tablero').classList.remove('container-btn');
-        document.querySelector('.header-tablero').style.display = 'block';
+        document.querySelector('.header-tablero').style.display = 'grid';
         document.querySelector('.container-btn-reboot').style.display = 'flex';
         document.querySelector('#game').style.display = 'grid';
 
         buildTablero();
+
+        game();
     });
 });
