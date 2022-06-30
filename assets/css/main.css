@@ -228,12 +228,24 @@ header {
 }
 
 .red{
-    color: var(--red-player);
+    background-color: var(--red-player) !important;
+    color: white !important;
     font-weight: bold;
+    padding: 0 1rem;
+    border-radius: 5px;
 }
 .yellow{
-    color: var(--yellow-player);
+    background-color: var(--yellow-player) !important;
+    color: black !important;
     font-weight: bold;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+.draw{
+  background-color: black !important;
+  color: white !important;
+  font-size: var(--title) !important;
+  padding: 0 2rem;
 }
 
 .btn-reboot{
